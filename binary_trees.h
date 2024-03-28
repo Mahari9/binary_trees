@@ -75,8 +75,6 @@ bst_t *bst_insert_node(bst_t **tree, int value);
 avl_t *array_to_avl(int *array, size_t size);
 avl_t *avl_remove(avl_t *root, int value);
 void fix_balance_1(avl_t **root, avl_t *node);
-static bst_t *remove_node(bst_t **root, int value);
-static bst_t *smallest_value(bst_t *node);
 avl_t *sorted_array_to_avl(int *array, size_t size);
 avl_t *tree_creator(avl_t *parent, int *array, int size);
 int binary_tree_is_heap(const binary_tree_t *tree);
@@ -91,5 +89,6 @@ int heap_extract(heap_t **root);
 void recurse_extract(heap_t *tree);
 heap_t *max_value(heap_t *tree);
 int *heap_to_sorted_array(heap_t *heap, size_t *size);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
 #endif
