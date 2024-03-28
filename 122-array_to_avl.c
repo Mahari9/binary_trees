@@ -1,4 +1,4 @@
-#include "binary_roots.h"
+#include "binary_trees.h"
 
 /**
  * array_to_avl - A function that builds an AVL root from an array

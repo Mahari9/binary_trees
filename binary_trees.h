@@ -67,7 +67,7 @@ bst_t *bst_search(const bst_t *tree, int value);
 bst_t *bst_remove(bst_t *root, int value);
 int binary_tree_is_avl(const binary_tree_t *tree);
 int is_avl_valid(const binary_tree_t *tree, int low, int high);
-size_t tree_height(const binary_tree_t *tree);
+void tree_height(const binary_tree_t *tree, int n, int *height);
 avl_t *avl_insert(avl_t **tree, int value);
 void fix_balance(avl_t **root, avl_t *node);
 int tree_height_1(const binary_tree_t *tree);
