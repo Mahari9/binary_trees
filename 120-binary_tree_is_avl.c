@@ -1,18 +1,18 @@
 #include "binary_trees.h"
 
 /**
- * tree_height - Measures the height of a binary tree
+ * tree_height2 - Measures the height of a binary tree
  * @tree: A pointer to the root node of the tree to measure the height
  * Return: If tree is NULL, your function must return 0, else return height
  */
-size_t tree_height(const binary_tree_t *tree)
+size_t tree_height2(const binary_tree_t *tree)
 {
 	if (tree)
 	{
 		size_t l = 0, r = 0;
 
-		l = tree->left ? 1 + tree_height(tree->left) : 1;
-		r = tree->right ? 1 + tree_height(tree->right) : 1;
+		l = tree->left ? 1 + tree_height2(tree->left) : 1;
+		r = tree->right ? 1 + tree_height2(tree->right) : 1;
 		return ((l > r) ? l : r);
 	}
 	return (0);
@@ -34,8 +34,8 @@ int is_avl_valid(const binary_tree_t *tree, int low, int high)
 	{
 		if (tree->n < low || tree->n > high)
 			return (0);
-		left_ht = tree_height(tree->left);
-		right_ht = tree_height(tree->right);
+		left_ht = tree_height2(tree->left);
+		right_ht = tree_height2(tree->right);
 		diff = left_ht > right_ht ? left_ht - right_ht : right_ht - left_ht;
 		if (diff > 1)
 			return (0);
