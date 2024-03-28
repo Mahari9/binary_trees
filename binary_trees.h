@@ -87,8 +87,12 @@ heap_t *heap_insert(heap_t **root, int value);
 size_t binary_tree_size(const binary_tree_t *tree);
 heap_t *array_to_heap(int *array, size_t size);
 int heap_extract(heap_t **root);
-void recurse_extract(heap_t *tree);
-heap_t *max_value(heap_t *tree);
+void enqueue_i_4(heap_t **queue_h, heap_t **queue_t,
+	int *n, void *item);
+heap_t *dequeue_i_4(heap_t **queue_h,
+	heap_t **queue_t, int *n);
+heap_t *find_last_heap_node(const heap_t *root);
+void swap_tree_node_with_parent_1(heap_t **node, heap_t **root);
 int *heap_to_sorted_array(heap_t *heap, size_t *size);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
