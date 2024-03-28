@@ -1,4 +1,4 @@
-#include "binary_roots.h"
+#include "binary_trees.h"
 
 /**
  * array_to_bst - A function that builds a Binary Search Tree from an array
