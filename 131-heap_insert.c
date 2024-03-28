@@ -42,7 +42,8 @@ heap_t *heap_insert(heap_t **root, int value)
 	leaves & 1 ? (tree->right = new_nodes) : (tree->left = new_nodes);
 
 	invert = new_nodes;
-	for (; invert->parent && (invert->n > invert->parent->n); invert = invert->parent)
+	for (; invert->parent && (invert->n > invert->parent->n)
+			; invert = invert->parent)
 	{
 		tmp = invert->n;
 		invert->n = invert->parent->n;
